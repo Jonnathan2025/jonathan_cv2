@@ -19,4 +19,4 @@ Este proyecto ha sido actualizado para cumplir con los principios de accesibilid
 - ✅ Foco visible en navegación por teclado.
 ## 🚀 Enlaces del proyecto
 🔗 https://github.com/Jonnathan2025/jonathan_cv2.git
-🌐 https://jonnathan2025.github.io/jonathan_cv/
+🌐 https://jonnathan2025.github.io/jonathan_cv2/
