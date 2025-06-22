@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonnathan Castillo - Portafolio Digital Accesible</title>
+    <meta name="description" content="Portafolio digital de Jonnathan Castillo, Tecnólogo en Software y estudiante de Ingeniería en Software especializado en desarrollo web y aplicaciones.">
+    <meta name="keywords" content="Jonnathan Castillo, Software, Desarrollador, JavaScript, C#, Python, Laravel, Portafolio">
+    <meta name="author" content="Jonnathan Castillo">
+    
+    <!-- External Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to content link para accesibilidad -->
+    <a href="#main-content" class="skip-link" aria-label="Saltar al contenido principal">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Controles de accesibilidad -->
+    <div class="accessibility-controls" aria-label="Controles de accesibilidad">
+        <div class="font-controls" role="group" aria-labelledby="font-controls-title">
+            <h3 id="font-controls-title" class="visually-hidden">Controles de tamaño de fuente</h3>
+            <button class="font-control-btn" onclick="changeFontSize('small')" 
+                    aria-label="Disminuir tamaño de fuente" title="Texto pequeño">A-</button>
+            <button class="font-control-btn" onclick="changeFontSize('normal')" 
+                    aria-label="Tamaño de fuente normal" title="Texto normal">A</button>
+            <button class="font-control-btn" onclick="changeFontSize('large')" 
+                    aria-label="Aumentar tamaño de fuente" title="Texto grande">A+</button>
+        </div>
+        <button class="high-contrast-toggle" onclick="toggleHighContrast()" 
+                aria-label="Alternar modo alto contraste" title="Alto contraste">
+            <i class="fas fa-adjust" aria-hidden="true"></i>
+            <span class="visually-hidden">Modo alto contraste</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar" 
+             role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home" aria-label="Jonnathan Castillo - Ir al inicio">
+                    Jonnathan Castillo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="#home" role="menuitem" 
+                               aria-label="Ir a la sección de inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="#about" role="menuitem" 
+                               aria-label="Ir a la sección sobre mí">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="#skills" role="menuitem" 
+                               aria-label="Ir a la sección de habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="#projects" role="menuitem" 
+                               aria-label="Ir a la sección de proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="#contact" role="menuitem" 
+                               aria-label="Ir a la sección de contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-center text-lg-start hero-content">
+                        <h1 id="hero-title" class="hero-title">Jonnathan Castillo</h1>
+                        <p class="hero-subtitle" role="doc-subtitle">
+                            Estudiante de Ingeniería en Software & Tecnólogo en Software
+                        </p>
+                        <p class="hero-description">
+                            Mi objetivo profesional es aprender y desarrollar habilidades técnicas y de programación 
+                            para contribuir en el mantenimiento de sistemas y aplicaciones dentro de una empresa. 
+                            Esto incluye el desarrollo de sitios web, aplicaciones móviles y sistemas de base de datos.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#contact" class="btn btn-primary-custom" 
+                               aria-label="Ir a la sección de contacto para comunicarse conmigo">
+                               Contáctame
+                            </a>
+                            <a href="#projects" class="btn btn-outline-custom" 
+                               aria-label="Ver mis proyectos de desarrollo de software">
+                               Ver Proyectos
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                        <img src="images/img.jpg" 
+                             alt="Fotografía profesional de Jonnathan Castillo, estudiante de Ingeniería en Software" 
+                             class="profile-img img-fluid"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title fade-in">Sobre Mí</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center fade-in">
+                            <p class="lead mb-4">
+                                Soy <strong>Tecnólogo en Software</strong> y estudiante de <strong>Ingeniería en Software</strong> 
+                                (7mo semestre) con experiencia en soporte técnico, mantenimiento de sistemas y desarrollo de aplicaciones. 
+                                Mi formación incluye estudios en el <em>Instituto Tecnológico Superior Cordillera</em> y actualmente 
+                                en la <em>Universidad Internacional SEK</em>.
+                            </p>
+                            <p class="mb-4">
+                                He trabajado en el área de <strong>salud pública</strong> y <strong>gestión inmobiliaria</strong> 
+                                del sector público, donde he desarrollado habilidades en registro y control de datos, 
+                                gestión de expedientes, y soporte técnico especializado en sistemas y aplicaciones.
+                            </p>
+                            <p>
+                                Mi experiencia incluye lenguajes como <strong>C#, JavaScript, Python y C++</strong>, 
+                                así como desarrollo web con <strong>HTML, CSS, Bootstrap y Laravel</strong> 
+                                con bases de datos <strong>MySQL</strong>. Busco oportunidades para seguir 
+                                creciendo profesionalmente en el desarrollo de software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title fade-in">Habilidades Técnicas</h2>
+                <div class="row g-4" role="list" aria-label="Lista de habilidades técnicas">
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-js-title" aria-describedby="skill-js-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <h3 id="skill-js-title" class="skill-title">JavaScript</h3>
+                            <p id="skill-js-desc">
+                                Desarrollo con JavaScript para aplicaciones web interactivas y dinámicas.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de JavaScript: 75%">
+                                <div class="progress-fill" data-width="75"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">75% de competencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-csharp-title" aria-describedby="skill-csharp-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <h3 id="skill-csharp-title" class="skill-title">C#</h3>
+                            <p id="skill-csharp-desc">
+                                Programación orientada a objetos con C# para desarrollo de aplicaciones robustas.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de C#: 80%">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">80% de competencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-python-title" aria-describedby="skill-python-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h3 id="skill-python-title" class="skill-title">Python</h3>
+                            <p id="skill-python-desc">
+                                Desarrollo de aplicaciones y scripts con Python para automatización y análisis.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de Python: 70%">
+                                <div class="progress-fill" data-width="70"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">70% de competencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-cpp-title" aria-describedby="skill-cpp-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 id="skill-cpp-title" class="skill-title">C++</h3>
+                            <p id="skill-cpp-desc">
+                                Programación en C++ para desarrollo de aplicaciones de alto rendimiento.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de C++: 65%">
+                                <div class="progress-fill" data-width="65"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">65% de competencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-laravel-title" aria-describedby="skill-laravel-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <h3 id="skill-laravel-title" class="skill-title">Laravel & MySQL</h3>
+                            <p id="skill-laravel-desc">
+                                Desarrollo web backend con Laravel y gestión de bases de datos MySQL.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="78" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de Laravel y MySQL: 78%">
+                                <div class="progress-fill" data-width="78"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">78% de competencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="skill-item fade-in" tabindex="0" 
+                             aria-labelledby="skill-frontend-title" aria-describedby="skill-frontend-desc">
+                            <div class="skill-icon" aria-hidden="true">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h3 id="skill-frontend-title" class="skill-title">Frontend Web</h3>
+                            <p id="skill-frontend-desc">
+                                Desarrollo frontend con HTML, CSS y Bootstrap para interfaces responsivas.
+                            </p>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" 
+                                 aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de Frontend Web: 85%">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div>
+                            <span class="progress-text visually-hidden">85% de competencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title fade-in">Proyectos Destacados</h2>
+                <div class="row g-4 justify-content-center" role="list" aria-label="Lista de proyectos">
+                    <div class="col-lg-6 col-md-8" role="listitem">
+                        <article class="project-card fade-in" tabindex="0" 
+                                 aria-labelledby="project-1-title" aria-describedby="project-1-desc">
+                            <div class="project-image" aria-hidden="true">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="project-content">
+                                <h3 id="project-1-title" class="project-title">
+                                    Control de Gastos - Familia Castillo
+                                </h3>
+                                <p id="project-1-desc">
+                                    Aplicación móvil desarrollada para la gestión inteligente del dinero familiar. 
+                                    Permite administrar ingresos, gastos y balances de cada miembro de la familia 
+                                    con interfaz intuitiva y reportes detallados.
+                                </p>
+                                <div class="project-tech" role="list" aria-label="Tecnologías utilizadas">
+                                    <span class="tech-tag" role="listitem">Android</span>
+                                    <span class="tech-tag" role="listitem">Java</span>
+                                    <span class="tech-tag" role="listitem">SQLite</span>
+                                    <span class="tech-tag" role="listitem">Material Design</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title fade-in">Información de Contacto</h2>
+                <div class="row g-4" role="list" aria-label="Métodos de contacto">
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="contact-item fade-in" tabindex="0" 
+                             aria-labelledby="contact-email-title" aria-describedby="contact-email-info">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 id="contact-email-title" class="contact-title">Correo Electrónico</h3>
+                            <p id="contact-email-info" class="contact-info">
+                                <a href="mailto:jonnathancastillochalan@gmail.com" 
+                                   aria-label="Enviar correo electrónico a Jonnathan Castillo">
+                                   jonnathancastillochalan@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="contact-item fade-in" tabindex="0" 
+                             aria-labelledby="contact-phone-title" aria-describedby="contact-phone-info">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 id="contact-phone-title" class="contact-title">Teléfono</h3>
+                            <p id="contact-phone-info" class="contact-info">
+                                <a href="tel:+593984211439" 
+                                   aria-label="Llamar a Jonnathan Castillo al +593 98 421 1439">
+                                   +593 98 421 1439
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6" role="listitem">
+                        <div class="contact-item fade-in" tabindex="0" 
+                             aria-labelledby="contact-location-title" aria-describedby="contact-location-info">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 id="contact-location-title" class="contact-title">Ubicación</h3>
+                            <p id="contact-location-info" class="contact-info">
+                                Calle Pio XII, Ecuador
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo" aria-labelledby="footer-title">
+        <div class="container">
+            <h2 id="footer-title" class="visually-hidden">Pie de página con enlaces sociales</h2>
+            <div class="social-links" role="list" aria-label="Enlaces a redes sociales">
+                <a href="https://linkedin.com/in/jonnathan-castillo" class="social-link" 
+                   role="listitem" aria-label="Visitar perfil de LinkedIn de Jonnathan Castillo">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    <span class="visually-hidden">LinkedIn</span>
+                </a>
+                <a href="https://github.com/jonnathan-castillo" class="social-link" 
+                   role="listitem" aria-label="Visitar perfil de GitHub de Jonnathan Castillo">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span class="visually-hidden">GitHub</span>
+                </a>
+                <a href="https://twitter.com/jonnathan_dev" class="social-link" 
+                   role="listitem" aria-label="Visitar perfil de Twitter de Jonnathan Castillo">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="visually-hidden">Twitter</span>
+                </a>
+                <a href="https://instagram.com/jonnathan.dev" class="social-link" 
+                   role="listitem" aria-label="Visitar perfil de Instagram de Jonnathan Castillo">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="visually-hidden">Instagram</span>
+                </a>
+            </div>
+            <div class="text-center">
+                <p>&copy; 2025 Jonnathan Castillo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Script para controles de accesibilidad -->
+    <script>
+        // Control de tamaño de fuente
+        function changeFontSize(size) {
+            document.body.classList.remove('font-small', 'font-large', 'font-xl');
+            if (size !== 'normal') {
+                document.body.classList.add('font-' + size);
+            }
+            // Anunciar cambio a lectores de pantalla
+            announceToScreenReader(`Tamaño de fuente cambiado a ${size === 'normal' ? 'normal' : size === 'small' ? 'pequeño' : 'grande'}`);
+        }
+
+        // Control de alto contraste
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            const isActive = document.body.classList.contains('high-contrast');
+            announceToScreenReader(`Modo alto contraste ${isActive ? 'activado' : 'desactivado'}`);
+        }
+
+        // Función para anunciar cambios a lectores de pantalla
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'visually-hidden';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
