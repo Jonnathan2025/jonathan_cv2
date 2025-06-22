@@ -17,6 +17,6 @@ Este proyecto ha sido actualizado para cumplir con los principios de accesibilid
 - ✅ Botones para ajustar el tamaño de fuente.
 - ✅ Botón para activar alto contraste.
 - ✅ Foco visible en navegación por teclado.
-##🚀 Enlaces del proyecto
-🔗 https://github.com/Jonnathan2025/jonathan_cv.git
+## 🚀 Enlaces del proyecto
+🔗 https://github.com/Jonnathan2025/jonathan_cv2.git
 🌐 https://jonnathan2025.github.io/jonathan_cv/
